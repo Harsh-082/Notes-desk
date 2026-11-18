@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111c32;
+}
+
+header a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #94a3b8;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin: 35px auto;
+    max-width: 650px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #1e293b;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+#results {
+    display: grid;
+    gap: 15px;
+    text-align: left;
+}
+
+.song-card {
+    background: #1e293b;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.song-card h3 {
+    margin: 0 0 8px;
+}
+
+.song-card p {
+    color: #94a3b8;
+}
+
+.song-card button {
+    margin-top: 8px;
+}
+
+#playerSection {
+    margin-top: 40px;
+}
+
+#player iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    main {
+        margin-top: 35px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+}

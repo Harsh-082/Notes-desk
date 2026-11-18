@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesDesk Music</title>
+    <link rel="stylesheet" href="music.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">← NotesDesk</a>
+        <h2>NotesDesk Music 🎵</h2>
+    </header>
+
+    <main>
+        <h1>Find your music.</h1>
+        <p>Search songs and play them here.</p>
+
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search any song or artist...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="results"></div>
+
+        <section id="playerSection" hidden>
+            <h2>Now Playing</h2>
+            <div id="player"></div>
+        </section>
+    </main>
+
+    <script src="music.js"></script>
+</body>
+
+</html>

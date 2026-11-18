@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesDesk - Your Content Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">N</span>
+            NotesDesk
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#uploads">Explore</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="music.html" class="music-btn">🎵 Music</a>
+            <a href="#uploads" class="nav-btn">Explore Files</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="tag">YOUR DIGITAL CONTENT HUB</span>
+                <h1>Everything you need,<br><span>in one place.</span></h1>
+                <p>Discover, explore and access documents, videos, images and more — all in one place.</p>
+
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="text" id="searchInput" placeholder="Search files, videos, images...">
+                    <button onclick="searchFiles()">Search</button>
+                </div>
+
+                <div class="hero-note">Explore resources. Access them anytime.</div>
+            </div>
+        </section>
+
+        <section class="categories section" id="categories">
+            <div class="section-heading">
+                <div>
+                    <span class="tag">BROWSE LIBRARY</span>
+                    <h2>Explore Categories</h2>
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card" onclick="filterFiles('Documents')">
+                    <div class="category-icon blue">▤</div>
+                    <h3>Documents</h3>
+                    <p>PDF, DOC, PPT, Excel</p>
+                </div>
+
+                <div class="category-card" onclick="filterFiles('Videos')">
+                    <div class="category-icon red">▶</div>
+                    <h3>Videos</h3>
+                    <p>Video resources</p>
+                </div>
+
+                <div class="category-card" onclick="filterFiles('Images')">
+                    <div class="category-icon purple">▧</div>
+                    <h3>Images</h3>
+                    <p>Photos and graphics</p>
+                </div>
+
+                <div class="category-card" onclick="filterFiles('Audio')">
+                    <div class="category-icon orange">♫</div>
+                    <h3>Audio</h3>
+                    <p>Music and audio files</p>
+                </div>
+
+                <div class="category-card" onclick="filterFiles('Other')">
+                    <div class="category-icon green">▣</div>
+                    <h3>Other Files</h3>
+                    <p>ZIP and other formats</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="uploads section" id="uploads">
+            <div class="section-heading">
+                <div>
+                    <span class="tag">FRESH CONTENT</span>
+                    <h2 id="uploadsTitle">Latest Uploads</h2>
+                </div>
+                <button class="clear-btn" onclick="showAll()">View All</button>
+            </div>
+
+            <div class="file-grid" id="fileGrid"></div>
+            <p id="emptyMessage" class="empty-message" hidden>No files found.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">
+            <span class="logo-icon">N</span> NotesDesk
+        </a>
+        <p>Your Content. One Place.</p>
+        <p class="copyright">© 2026 NotesDesk. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
